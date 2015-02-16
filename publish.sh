@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export REPO_SLUG="symbid/dev-blog"
+export REPO_SLUG="Symbid/dev-blog"
 
-#export TRAVIS_REPO_SLUG="symbid/dev-blog"
+#export TRAVIS_REPO_SLUG="Symbid/dev-blog"
 #export TRAVIS_PULL_REQUEST="false"
 #export TRAVIS_BRANCH="master"
 #export TRAVIS_BUILD_DIR=`pwd`
