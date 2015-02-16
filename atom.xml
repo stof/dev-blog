@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title><![CDATA[Sculpin Blog Skeleton]]></title>
-    <link href="/atom.xml" rel="self"/>
-    <link href="/"/>
-    <updated>2015-02-16T15:16:51+00:00</updated>
-    <id>/</id>
-        <generator uri="http://sculpin.io/">Sculpin</generator>
-    </feed>
