@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export REPO_SLUG="symbid/dev-blog"
+export REPO_SLUG="Symbid/dev-blog"
 
-#export TRAVIS_REPO_SLUG="symbid/dev-blog"
+#export TRAVIS_REPO_SLUG="Symbid/dev-blog"
 #export TRAVIS_PULL_REQUEST="false"
 #export TRAVIS_BRANCH="master"
 #export TRAVIS_BUILD_DIR=`pwd`
@@ -11,7 +11,7 @@ echo -e "Running details: $TRAVIS_REPO_SLUG / $TRAVIS_PULL_REQUEST / $TRAVIS_BRA
 
 if [ "$TRAVIS_REPO_SLUG" == $REPO_SLUG ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
 
-  echo -e "Getting ready to update blog ...\n"
+  echo -e "Checks passed, getting ready to update blog ...\n"
 
   echo -e "Checking out gh-pages branch...\n"
 
