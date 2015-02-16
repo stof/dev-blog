@@ -11,7 +11,7 @@ echo -e "Running details: $TRAVIS_REPO_SLUG / $TRAVIS_PULL_REQUEST / $TRAVIS_BRA
 
 if [ "$TRAVIS_REPO_SLUG" == $REPO_SLUG ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
 
-  echo -e "Getting ready to update blog ...\n"
+  echo -e "Checks passed, getting ready to update blog ...\n"
 
   echo -e "Checking out gh-pages branch...\n"
 
