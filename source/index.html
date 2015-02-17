@@ -17,6 +17,9 @@ use:
             <h2>
                 <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
             </h2>
+            {% if post.authors %}
+                {% include "author_list.twig" with {authors: post.authors} %}
+            {% endif %}
             {% if (post.date) %}
                 <div><small>Posted on {{ post.date|date("l j F Y") }}</small></div>
             {% endif %}
