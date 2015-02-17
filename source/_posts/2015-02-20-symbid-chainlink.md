@@ -9,6 +9,8 @@ tags:
     - chain of responsibility
     - open source
     - package
+authors:
+    - rdohms
     
 draft: true
 ---

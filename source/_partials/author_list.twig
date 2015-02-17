@@ -1,0 +1,6 @@
+{% if authors %}
+    {% for handle in authors %}
+        {% set author = site.authors[handle] %}
+        <span><a href="{{ author.twitter }}">{{ author.name }}</a></span>
+    {% endfor %}
+{% endif %}
