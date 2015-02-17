@@ -3,3 +3,13 @@
 # in a template to get the contents of the `title` key.
 title: Symbid Dev Blog
 subtitle: The IJburg Chronicles
+
+authors:
+  rdohms:
+      name: Rafael Dohms
+      url: http://doh.ms
+      twitter: http://twitter.com/rdohms
+      twitter_handle: rdohms
+      github: https://github.com/rdohms
+      email: rafael@symbid.com
+      bio: Symbid's Lead Backend Developer. Serial Creator of User Groups, speaker and contributor to PHP and its ecosystem.

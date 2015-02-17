@@ -4,11 +4,23 @@
     <meta name="robots" content="index, follow">
 {% endblock %}
 
+{% block head_authors %}
+    {% if (page.authors) %}
+        {% for handle in page.authors %}
+        <meta name="author" content="{{ site.authors[handle].twitter }}">
+        <link rel="author" href="{{ site.authors[handle].twitter }}">
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
 {% block content_wrapper %}
     <article class="blog-article">
 
         <header class="blog-article-header">
             <h2>{{ page.title }}</h2>
+            {% if page.authors %}
+                {% include "author_list.twig" with {authors: page.authors} %}
+            {% endif %}
             {% if (page.date) %}
                 <div class="blog-article-date"><small>Posted on {{ page.date|date("l j F Y") }}</small></div>
             {% endif %}
@@ -17,6 +29,12 @@
         <div class="blog-article-content">
             {{ page.blocks.content|raw }}
         </div>
+
+        {% if page.authors %}
+            {% for handle in page.authors %}
+                {% include "author_box.twig" with {handle: handle} %}
+            {% endfor %}
+        {% endif %}
 
         {% if page.categories %}
             <p class="categories">
