@@ -3,3 +3,5 @@
 # in a template to get the contents of the `title` key.
 title: Symbid Dev Blog
 subtitle: The IJburg Chronicles
+
+google_analytics_tracking_id: UA-46751093-2
