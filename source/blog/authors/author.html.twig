@@ -1,0 +1,34 @@
+---
+layout: default
+title: Author Archive
+nav: authors
+generator: posts_author_index
+use:
+    - posts_categories
+    - posts_tags
+---
+{% set handle = page.author %}
+{% set author = site.authors[handle] %}
+
+{#{% block title %}{{ page.title }}: {{ page.author }}{% endblock %}#}
+
+{% block content %}
+    <h2>Posts by {{ author.name }}</h2>
+
+    <ul class="list-unstyled">
+    {% for post in page.author_posts %}
+        <li>
+            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+            -
+            <em>{{ post.date|date('Y.m.d') }}</em>
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endblock content %}
+
+{% block sidebar_post_meta %}
+    {% if site.authors[handle] %}
+        {% include "author_box.twig" with {handle: handle} %}
+    {% endif %}
+{% endblock %}

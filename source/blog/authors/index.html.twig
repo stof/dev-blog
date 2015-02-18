@@ -1,0 +1,11 @@
+
+---
+layout: default
+title: Authors
+use:
+    - posts_authors
+---
+
+{% for author,posts in data.posts_authors %}
+    {% include "author_box.twig" with {handle: author} %}
+{% endfor %}
