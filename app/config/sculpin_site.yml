@@ -3,3 +3,6 @@
 # in a template to get the contents of the `title` key.
 title: Symbid Dev Blog
 subtitle: The IJburg Chronicles
+
+disqus:
+    shortname: symbidtech
