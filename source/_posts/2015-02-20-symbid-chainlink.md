@@ -11,13 +11,14 @@ tags:
     - package
 authors:
     - rdohms
-    
+    - mennovanslooten
+
 draft: true
 ---
 
-As a development team we have always believed in open source and sharing as much as we can with the community. Following in this belief we have decided to start sharing some of our independent pieces of code, starting with *Chainlink*. 
+As a development team we have always believed in open source and sharing as much as we can with the community. Following in this belief we have decided to start sharing some of our independent pieces of code, starting with *Chainlink*.
 
-Keep an eye on the *Symbid* namespace and at [packagist](http://packagist.com/package/symbid), for we hope to share even more in the future. 
+Keep an eye on the *Symbid* namespace and at [packagist](http://packagist.com/package/symbid), for we hope to share even more in the future.
 
 
 ## Chainlink
@@ -32,19 +33,19 @@ The Context allows you to attach any number of handlers to it and will then sear
     {
         // ... fulfill interface ...
     }
-    
+
     $handler = new MyHandler();
-    
+
     // Create a Context to chain responsibilities
     $context = new Symbid\Chainlink\Context();
     $context->addHandler($handler);
-    
+
     // Pass in an item to be handled
     $context->handle($input);
-    
+
     // You can also get the handler as a return value
     $handler = $context->getHandlerFor($input);
-    
+
     // You may have need of returning multiple handlers
     $handler = $context->getAllHandlersFor($input);
 ~~~
@@ -59,7 +60,7 @@ symbid_chainlink:
     contexts:
         my_new_context:
             tag: mycontext.handler
-            
+
 # In your services.yml
 services:
     my_bundle.handler.raging_handler:

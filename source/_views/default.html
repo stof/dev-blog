@@ -10,6 +10,7 @@
         {% endblock %}
         <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic" rel="stylesheet" type="text/css">
         <link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,600" rel="stylesheet" type="text/css">
+        <link href="{{ site.url }}/components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ site.url }}/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ site.url }}/css/style.css" rel="stylesheet" type="text/css" />
 
@@ -80,7 +81,9 @@
                     {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
                 </div>
 
-                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                <div class="col-sm-4 blog-sidebar">
+                    {% block sidebar_post_meta %}
+                    {% endblock %}
 
                     {% if (data.posts_tags) %}
                         <div class="well sidebar-nav">

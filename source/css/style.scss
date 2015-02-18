@@ -93,7 +93,7 @@ a {
 .blog-article-header {
     padding: 20px 0;
 
-    h2 {
+    h1 {
         margin: 0;
     }
 }
@@ -115,3 +115,31 @@ a {
     margin-bottom: 0.85em;
 }
 */
+
+.blog-authors {
+
+    .blog-author-avatar {
+        width: 60px;
+        height: 60px;
+        margin: 0 15px 5px 0;
+        float: left;
+    }
+
+    .blog-author-name {
+        /*float: left;*/
+        line-height: 40px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .blog-author-links {
+        /*float: left;*/
+        line-height: 20px;
+    }
+
+    .blog-author-bio {
+        clear: left;
+        margin: 0;
+    }
+
+}

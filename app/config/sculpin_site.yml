@@ -5,6 +5,15 @@ title: Symbid Dev Blog
 subtitle: The IJburg Chronicles
 
 authors:
+  mennovanslooten:
+      name: Menno van Slooten
+      url: http://mennovanslooten.nl
+      avatar: https://pbs.twimg.com/profile_images/1752009279/headshot.png
+      twitter: http://twitter.com/mennovanslooten
+      twitter_handle: mennovanslooten
+      github: https://github.com/mennovanslooten
+      email: menno@symbid.com
+      bio: Symbid's Lead Guitarist and Front-end developer.
   rdohms:
       name: Rafael Dohms
       url: http://doh.ms

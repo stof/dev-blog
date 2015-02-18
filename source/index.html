@@ -13,15 +13,17 @@ use:
 {% for post in page.pagination.items %}
     <article>
 
-        <header>
-            <h2>
+        <header class="blog-article-header">
+            <h1>
                 <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-            </h2>
+            </h1>
+
             {% if post.authors %}
-                {% include "author_list.twig" with {authors: post.authors} %}
+                <div class="blog-article-authors">{% include "author_list.twig" with {authors: post.authors} %}</div>
             {% endif %}
+
             {% if (post.date) %}
-                <div><small>Posted on {{ post.date|date("l j F Y") }}</small></div>
+                <div class="blog-article-date"><small>Posted on {{ post.date|date("l j F Y") }}</small></div>
             {% endif %}
         </header>
 
