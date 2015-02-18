@@ -61,3 +61,14 @@ use:
         </nav>
     {% endif %}
 {% endblock %}
+
+{% block sidebar_post_meta %}
+    {% if data.posts_categories %}
+        {% include "categories_box.twig" with {categories: data.posts_categories|keys } %}
+    {% endif %}
+
+    {% if data.posts_tags %}
+        {% include "tags_box.twig" with {tags: data.posts_tags|keys } %}
+    {% endif %}
+
+{% endblock %}

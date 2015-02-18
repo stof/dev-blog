@@ -4,10 +4,15 @@ title: Tags
 use:
     - posts_tags
 ---
-<h2>Tags</h2>
 
-<div>
-{% for tag,posts in data.posts_tags %}
-<a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
-{% endfor %}
-</div>
+
+
+<ul class="list-unstyled">
+    {% for tag, posts in data.posts_tags %}
+    <li>
+        <i class="fa fa-fw fa-tag"></i>
+        <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
+        <span class="badge">{{ posts|length }}</span>
+    </li>
+    {% endfor %}
+</ul>

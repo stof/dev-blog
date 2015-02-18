@@ -4,10 +4,13 @@ title: Categories
 use:
     - posts_categories
 ---
-<h2>Categories</h2>
+<ul class="list-unstyled">
+    {% for category,posts in data.posts_categories %}
+    <li>
+        <i class="fa fa-fw fa-bookmark"></i>
+        <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>
+        <span class="badge">{{ posts|length }}</span>
+    </li>
+    {% endfor %}
+</ul>
 
-<div>
-{% for category,posts in data.posts_categories %}
-<a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>
-{% endfor %}
-</div>

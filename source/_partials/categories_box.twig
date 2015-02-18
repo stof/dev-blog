@@ -1,0 +1,9 @@
+<h4>Categories</h4>
+
+<ul class="list-unstyled">
+    {% for category in categories %}
+    <li><i class="fa fa-fw fa-bookmark"></i> <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a></li>
+    {% endfor %}
+</ul>
+
+<hr>

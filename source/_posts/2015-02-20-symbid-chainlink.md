@@ -11,7 +11,6 @@ tags:
     - package
 authors:
     - rdohms
-    - mennovanslooten
 
 draft: true
 ---
