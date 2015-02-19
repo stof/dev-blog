@@ -4,7 +4,6 @@ php:
 env:
   global:
   - secure: KjS3ZZKcGuKY5mmyEk4idMngnJ1TPCGHLeviPhUNY52i+8/MWSfr1xU/KSrgfBlJwfvlvQM6R8Sim6d6m0rOvbyAXr4D8O0TQIK4TnRMFuctg1yi5E4RhyAcbRSGT8JwUTEG9Ja20ltLXaoRH3LH05QZQ0YdE4tsKJl/i51Ov+Q=
-
 before_script:
 - composer config -g github-oauth.github.com $GH_TOKEN
 - curl -O https://download.sculpin.io/sculpin.phar
@@ -13,3 +12,6 @@ script:
 - php sculpin.phar generate --env=prod
 after_script:
 - ./publish.sh
+notifications:
+  slack:
+    secure: evcT8Ntz+5tA/y+j9kOZvtCI7B4B+63Sy4D17687dPZ+IYF07iQPJWx+clphXkrihky6c3rS7/Y/Ilvxdu4eyUmDdPGDNwxsVN9rGh2qPhJGHIrfp3O6fyrTeRORON6Mxw80GWEVzKsltPChYUU/8/ScNAJ9Ug3sHksdKhHnh18=
