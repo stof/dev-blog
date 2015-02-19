@@ -11,6 +11,6 @@ use:
 
 {% block content_wrapper %}
     {% for author,posts in data.posts_authors %}
-        {% include "author_box.twig" with {handle: author} %}
+        {% include "author_box.html.twig" with {handle: author} %}
     {% endfor %}
 {% endblock %}

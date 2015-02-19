@@ -23,7 +23,7 @@ use:
                 </h2>
 
                 {% if post.authors %}
-                    {% include "author_list.twig" with {authors: post.authors} %}
+                    {% include "author_list.html.twig" with {authors: post.authors} %}
                 {% endif %}
 
                 {% if (post.date) %}
@@ -66,6 +66,6 @@ use:
 
 {% block sidebar_post_meta %}
     {% if data.posts_tags %}
-        {% include "tags_box.twig" with {tags: data.posts_tags|keys } %}
+        {% include "tags_box.html.twig" with {tags: data.posts_tags|keys } %}
     {% endif %}
 {% endblock %}

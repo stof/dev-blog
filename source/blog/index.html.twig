@@ -12,7 +12,7 @@ use:
 
 {% block content_wrapper %}
 
-    {% include "article_list.twig" with {posts: page.pagination.items} %}
+    {% include "article_list.html.twig" with {posts: page.pagination.items} %}
 
     <div>
     {% if page.pagination.previous_page or page.pagination.next_page %}
