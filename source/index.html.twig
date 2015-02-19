@@ -10,10 +10,11 @@ use:
 ---
 
 {% block page_title %}
-{{ site.title }}
+    {{ site.title }}
 {% endblock %}
 
-{% block content_wrapper %}
+
+{% block content %}
     {% for post in page.pagination.items %}
         <article>
 
@@ -63,6 +64,7 @@ use:
         </nav>
     {% endif %}
 {% endblock %}
+
 
 {% block sidebar_post_meta %}
     {% if data.posts_tags %}

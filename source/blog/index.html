@@ -1,0 +1,15 @@
+---
+layout: default
+use:
+    - posts
+
+---
+
+{% block page_title %}
+    Posts archive
+{% endblock %}
+
+
+{% block content %}
+    {% include "article_list.html.twig" with {posts: data.posts} %}
+{% endblock %}

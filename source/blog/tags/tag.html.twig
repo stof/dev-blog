@@ -1,10 +1,7 @@
 ---
 layout: default
 title: Tag Archive
-generator: [posts_tag_index, pagination]
-pagination:
-    provider: page.tag_posts
-
+generator: posts_tag_index
 ---
 
 {% block head_meta %}
@@ -12,24 +9,12 @@ pagination:
     <meta name="robots" content="noindex, follow">
 {% endblock %}
 
+
 {% block page_title %}
     Posts tagged <span class="label label-default">{{ page.tag }}</span>
 {% endblock %}
 
-{% block content_wrapper %}
 
-    {% include "article_list.html.twig" with {posts: page.pagination.items} %}
-
-    <div>
-    {% if page.pagination.previous_page or page.pagination.next_page %}
-        <nav class="article clearfix">
-        {% if page.pagination.previous_page %}
-        <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><span class="title">Previous Page</span></a>
-        {% endif %}
-        {% if page.pagination.next_page %}
-        <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><span class="title">Next Page</span></a>
-        {% endif %}
-        </nav>
-    {% endif %}
-    </div>
+{% block content %}
+    {% include "article_list.html.twig" with {posts: page.tag_posts} %}
 {% endblock %}

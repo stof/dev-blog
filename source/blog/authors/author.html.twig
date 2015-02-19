@@ -14,8 +14,6 @@ use:
 {% set handle = page.author %}
 {% set author = site.authors[handle] %}
 
-{#{% block title %}{{ page.title }}: {{ page.author }}{% endblock %}#}
-
 {% block content %}
     {% include "article_list.html.twig" with {posts: page.author_posts} %}
 {% endblock content %}
