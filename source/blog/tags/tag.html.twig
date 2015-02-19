@@ -1,0 +1,20 @@
+---
+layout: default
+title: Tag Archive
+generator: posts_tag_index
+---
+
+{% block head_meta %}
+    <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/blog/tags/{{ page.tag|url_encode(true) }}.xml" title="{{ site.title }} '{{ page.tag }}' tag feed" />
+    <meta name="robots" content="noindex, follow">
+{% endblock %}
+
+
+{% block page_title %}
+    Posts tagged <span class="label label-default">{{ page.tag }}</span>
+{% endblock %}
+
+
+{% block content %}
+    {% include "article_list.html.twig" with {posts: page.tag_posts} %}
+{% endblock %}

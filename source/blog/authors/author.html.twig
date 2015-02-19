@@ -14,14 +14,12 @@ use:
 {% set handle = page.author %}
 {% set author = site.authors[handle] %}
 
-{#{% block title %}{{ page.title }}: {{ page.author }}{% endblock %}#}
-
 {% block content %}
-    {% include "article_list.twig" with {posts: page.author_posts} %}
+    {% include "article_list.html.twig" with {posts: page.author_posts} %}
 {% endblock content %}
 
 {% block sidebar_post_meta %}
     {% if site.authors[handle] %}
-        {% include "author_box.twig" with {handle: handle} %}
+        {% include "author_box.html.twig" with {handle: handle} %}
     {% endif %}
 {% endblock %}

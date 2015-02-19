@@ -10,10 +10,11 @@ use:
 ---
 
 {% block page_title %}
-{{ site.title }}
+    {{ site.title }}
 {% endblock %}
 
-{% block content_wrapper %}
+
+{% block content %}
     {% for post in page.pagination.items %}
         <article>
 
@@ -23,7 +24,7 @@ use:
                 </h2>
 
                 {% if post.authors %}
-                    {% include "author_list.twig" with {authors: post.authors} %}
+                    {% include "author_list.html.twig" with {authors: post.authors} %}
                 {% endif %}
 
                 {% if (post.date) %}
@@ -64,8 +65,9 @@ use:
     {% endif %}
 {% endblock %}
 
+
 {% block sidebar_post_meta %}
     {% if data.posts_tags %}
-        {% include "tags_box.twig" with {tags: data.posts_tags|keys } %}
+        {% include "tags_box.html.twig" with {tags: data.posts_tags|keys } %}
     {% endif %}
 {% endblock %}

@@ -9,8 +9,9 @@ use:
     Authors
 {% endblock %}
 
-{% block content_wrapper %}
+
+{% block content %}
     {% for author,posts in data.posts_authors %}
-        {% include "author_box.twig" with {handle: author} %}
+        {% include "author_box.html.twig" with {handle: author} %}
     {% endfor %}
 {% endblock %}

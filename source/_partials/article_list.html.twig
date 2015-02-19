@@ -1,0 +1,55 @@
+<table class="table blog-article-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <th scope="row">
+                <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+            </th>
+            <td>
+                {{ post.date|date('Y.m.d') }}
+            </td>
+            <td>
+                {% for tag in post.meta.tags %}
+                    <a class="label label-default" href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{#
+
+{% if page.pagination.previous_page or page.pagination.next_page %}
+        <nav>
+            <ul class="pager">
+                {% if page.pagination.previous_page %}
+                    <li class="previous">
+                        <a href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Newer">
+                            <i class="fa fa-fw fa-chevron-left"></i>
+                            Newer
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if page.pagination.next_page %}
+                    <li class="next">
+                        <a href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Older">
+                            Older
+                            <i class="fa fa-fw fa-chevron-right"></i>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+{% endif %}
+
+#}

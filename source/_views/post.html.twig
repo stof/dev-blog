@@ -17,7 +17,7 @@
     {{ page.title }}
 {% endblock %}
 
-{% block content_wrapper %}
+{% block content %}
     <article class="blog-article">
 
         <header class="blog-article-header">
@@ -25,7 +25,7 @@
                 <h1>{{ page.title }}</h1>
             -->
             {% if page.authors %}
-                <div class="blog-article-authors">{% include "author_list.twig" with {authors: page.authors} %}</div>
+                <div class="blog-article-authors">{% include "author_list.html.twig" with {authors: page.authors} %}</div>
             {% endif %}
             {% if (page.date) %}
                 <div class="blog-article-date"><small>Posted on {{ page.date|date("l j F Y") }}</small></div>
@@ -55,11 +55,11 @@
 
 {% block sidebar_post_meta %}
     {% if page.authors %}
-        {% include "authors_box.twig" with {authors: page.authors} %}
+        {% include "authors_box.html.twig" with {authors: page.authors} %}
     {% endif %}
 
     {% if page.tags %}
-        {% include "tags_box.twig" with {tags: page.tags} %}
+        {% include "tags_box.html.twig" with {tags: page.tags} %}
     {% endif %}
 
     {% if page.previous_post or page.next_post %}
