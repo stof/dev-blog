@@ -1,0 +1,10 @@
+{% if authors %}
+    <div class="blog-article-authors">
+        By
+        {% for handle in authors %}
+            {% set author = site.authors[handle] %}
+            <span><a href="/blog/authors/{{ handle }}">{{ author.name }}</a></span>
+            {% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

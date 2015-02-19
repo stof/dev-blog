@@ -1,13 +1,25 @@
 ---
 layout: default
-title: Categories
 use:
     - posts_categories
 ---
-<h2>Categories</h2>
 
-<div>
-{% for category,posts in data.posts_categories %}
-<a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>
-{% endfor %}
-</div>
+{% block page_title %}
+    Categories
+{% endblock %}
+
+{% set year = '0' %}
+
+{% block content_wrapper %}
+    <ul class="list-unstyled blog-icon-list">
+        {% for category,posts in data.posts_categories %}
+        <li>
+            <i class="fa fa-fw fa-bookmark"></i>
+            <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>
+            <i class="fa fa-fw fa-ellipsis-h"></i>
+            <em>{{ posts|length }} post{% if posts|length > 1 %}s{% endif %}</em>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

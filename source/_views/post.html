@@ -4,11 +4,29 @@
     <meta name="robots" content="index, follow">
 {% endblock %}
 
+{% block head_authors %}
+    {% if (page.authors) %}
+        {% for handle in page.authors %}
+        <meta name="author" content="{{ site.authors[handle].twitter }}">
+        <link rel="author" href="{{ site.authors[handle].twitter }}">
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+{% block page_title %}
+    {{ page.title }}
+{% endblock %}
+
 {% block content_wrapper %}
     <article class="blog-article">
 
         <header class="blog-article-header">
-            <h2>{{ page.title }}</h2>
+            <!--
+                <h1>{{ page.title }}</h1>
+            -->
+            {% if page.authors %}
+                <div class="blog-article-authors">{% include "author_list.twig" with {authors: page.authors} %}</div>
+            {% endif %}
             {% if (page.date) %}
                 <div class="blog-article-date"><small>Posted on {{ page.date|date("l j F Y") }}</small></div>
             {% endif %}
@@ -18,22 +36,6 @@
             {{ page.blocks.content|raw }}
         </div>
 
-        {% if page.categories %}
-            <p class="categories">
-            Categories:
-            {% for category in page.categories %}
-            <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
-        {% if page.tags %}
-            <p class="tags">
-            Tags:
-            {% for tag in page.tags %}
-            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
 
         {% if site.disqus.shortname %}
         <div id="disqus_thread"></div>
@@ -48,18 +50,43 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         {% endif %}
-
-        {% if page.previous_post or page.next_post %}
-            <nav class="article">
-                <ul>
-                    {% if page.next_post %}
-                        <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
-                    {% endif %}
-                    {% if page.previous_post %}
-                        <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        {% endif %}
     </article>
+{% endblock %}
+
+{% block sidebar_post_meta %}
+    {% if page.authors %}
+        {% include "authors_box.twig" with {authors: page.authors} %}
+    {% endif %}
+
+    {% if page.categories %}
+        {% include "categories_box.twig" with {categories: page.categories} %}
+    {% endif %}
+
+    {% if page.tags %}
+        {% include "tags_box.twig" with {tags: page.tags} %}
+    {% endif %}
+
+    {% if page.previous_post or page.next_post %}
+        <nav>
+            <ul class="pager">
+                {% if page.next_post %}
+                    <li class="previous">
+                        <a href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}">
+                            <i class="fa fa-fw fa-chevron-left"></i>
+                            Newer
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% if page.previous_post %}
+                    <li class="next">
+                        <a href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}">
+                            Older
+                            <i class="fa fa-fw fa-chevron-right"></i>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
 {% endblock %}

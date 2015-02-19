@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "94c4c83d000c7438b27a31d1306dfe13",
+    "hash": "3225b4503afdb150c88337b471e1fa6e",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -75,21 +75,55 @@
             "time": "2015-01-22 12:14:01"
         },
         {
-            "name": "components/highlightjs",
-            "version": "7.3.0",
+            "name": "components/font-awesome",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/components/highlightjs.git",
-                "reference": "60f5b260c3ae12578f7241e15e8102e9b65c4d3b"
+                "url": "https://github.com/components/font-awesome.git",
+                "reference": "73acf4d65eadd8d127bafc7bd510240ea3979e83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/highlightjs/zipball/60f5b260c3ae12578f7241e15e8102e9b65c4d3b",
-                "reference": "60f5b260c3ae12578f7241e15e8102e9b65c4d3b",
+                "url": "https://api.github.com/repos/components/font-awesome/zipball/73acf4d65eadd8d127bafc7bd510240ea3979e83",
+                "reference": "73acf4d65eadd8d127bafc7bd510240ea3979e83",
                 "shasum": ""
             },
-            "require": {
-                "robloach/component-installer": "*"
+            "type": "component",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3.x-dev"
+                },
+                "component": {
+                    "styles": [
+                        "css/font-awesome.css"
+                    ],
+                    "files": [
+                        "css/font-awesome.min.css",
+                        "fonts/*"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "OFL-1.1"
+            ],
+            "description": "The iconic font designed for use with Twitter Bootstrap.",
+            "time": "2015-01-26 11:26:16"
+        },
+        {
+            "name": "components/highlightjs",
+            "version": "8.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/highlightjs.git",
+                "reference": "f27b85bc25d6c70c69347e77193688ec562ce2eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/highlightjs/zipball/f27b85bc25d6c70c69347e77193688ec562ce2eb",
+                "reference": "f27b85bc25d6c70c69347e77193688ec562ce2eb",
+                "shasum": ""
             },
             "type": "component",
             "extra": {
@@ -117,7 +151,7 @@
                 }
             ],
             "description": "Highlight.js highlights syntax in code examples on blogs, forums and in fact on any web pages.",
-            "time": "2013-04-24 15:11:49"
+            "time": "2014-12-10 02:08:20"
         },
         {
             "name": "components/jquery",

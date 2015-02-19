@@ -1,0 +1,12 @@
+<h4>Tags</h4>
+
+<ul class="list-unstyled blog-icon-list">
+    {% for tag in tags %}
+    <li>
+        <i class="fa fa-fw fa-tag"></i>
+        <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<hr>

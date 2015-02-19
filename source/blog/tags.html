@@ -1,13 +1,23 @@
 ---
 layout: default
-title: Tags
 use:
     - posts_tags
 ---
-<h2>Tags</h2>
 
-<div>
-{% for tag,posts in data.posts_tags %}
-<a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
-{% endfor %}
-</div>
+
+{% block page_title %}
+    Tags
+{% endblock %}
+
+{% block content_wrapper %}
+    <ul class="list-unstyled blog-icon-list">
+        {% for tag, posts in data.posts_tags %}
+        <li>
+            <i class="fa fa-fw fa-tag"></i>
+            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
+            <i class="fa fa-fw fa-ellipsis-h"></i>
+            <em>{{ posts|length }} post{% if posts|length > 1 %}s{% endif %}</em>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

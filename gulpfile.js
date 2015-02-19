@@ -20,7 +20,7 @@ gulp.task('devmode', function() {
 });
 
 
-gulp.task('watch', ['devmode', 'default'], function() {
+gulp.task('watch', ['default'], function() {
     gulp.watch('./source/css/**/*.scss', ['build:css']);
 });
 

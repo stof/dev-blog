@@ -3,9 +3,27 @@
 # in a template to get the contents of the `title` key.
 title: Symbid Dev Blog
 subtitle: The IJburg Chronicles
-
 disqus:
     shortname: symbidtech
 
 google_analytics_tracking_id: UA-46751093-2
 
+authors:
+  mennovanslooten:
+      name: Menno van Slooten
+      url: http://mennovanslooten.nl
+      avatar: https://pbs.twimg.com/profile_images/1752009279/headshot.png
+      twitter: http://twitter.com/mennovanslooten
+      twitter_handle: mennovanslooten
+      github: https://github.com/mennovanslooten
+      email: menno@symbid.com
+      bio: Symbid's Lead Guitarist and Frontend developer.
+  rdohms:
+      name: Rafael Dohms
+      url: http://doh.ms
+      avatar: https://pbs.twimg.com/profile_images/2619935061/wzdfd5co5z0a242piele_400x400.jpeg
+      twitter: http://twitter.com/rdohms
+      twitter_handle: rdohms
+      github: https://github.com/rdohms
+      email: rafael@symbid.com
+      bio: Symbid's Lead Backend Developer. Serial Creator of User Groups, speaker and contributor to PHP and its ecosystem.

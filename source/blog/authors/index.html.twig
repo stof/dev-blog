@@ -1,0 +1,16 @@
+
+---
+layout: default
+use:
+    - posts_authors
+---
+
+{% block page_title %}
+    Authors
+{% endblock %}
+
+{% block content_wrapper %}
+    {% for author,posts in data.posts_authors %}
+        {% include "author_box.twig" with {handle: author} %}
+    {% endfor %}
+{% endblock %}
