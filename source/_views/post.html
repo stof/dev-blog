@@ -58,10 +58,6 @@
         {% include "authors_box.twig" with {authors: page.authors} %}
     {% endif %}
 
-    {% if page.categories %}
-        {% include "categories_box.twig" with {categories: page.categories} %}
-    {% endif %}
-
     {% if page.tags %}
         {% include "tags_box.twig" with {tags: page.tags} %}
     {% endif %}
