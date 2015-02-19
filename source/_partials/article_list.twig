@@ -1,0 +1,73 @@
+{% set year = '0' %}
+{% set open_ul = false %}
+
+{#
+
+{% for post in posts %}
+    {% set this_year %}{{ post.date | date("Y") }}{% endset %}
+
+    {% if year != this_year %}
+        {% set month = '0' %}
+        {% set year = this_year %}
+    {% endif %}
+
+    {% set this_month %}{{ post.date | date("F") }}{% endset %}
+
+    {% if month != this_month %}
+        {% if open_ul %}
+            </ul>
+            {% set open_ul = false %}
+        {% endif %}
+
+
+        {% set month = this_month %}
+        <h2>{{ month }} {{ year }}</h2>
+
+        <ul class="list-unstyled blog-icon-list">
+        {% set open_ul = true %}
+    {% endif %}
+
+    <li>
+        <i class="fa fa-fw fa-file"></i>
+        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+        <i class="fa fa-fw fa-ellipsis-h"></i>
+        <em>{{ post.date|date('Y.m.d') }}</em>
+        {% if post.meta.tags %}
+            <p class="tags">
+            Tags:
+            {% for tag in post.meta.tags %}
+                <a class="label label-default" href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %} {% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+    </li>
+{% endfor %}
+
+{% if open_ul %}
+    </ul>
+    {% set open_ul = false %}
+{% endif %}
+
+#}
+
+
+
+<table class="table blog-article-table">
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <th scope="row">
+                <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+            </th>
+            <td>
+                {{ post.date|date('Y.m.d') }}
+            </td>
+            <td>
+                {% for tag in post.meta.tags %}
+                    <a class="label label-default" href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

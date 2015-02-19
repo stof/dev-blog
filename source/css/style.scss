@@ -96,8 +96,9 @@ a {
 
 .blog-article-header {
     padding: 20px 0;
+    padding: 0 0 20px;
 
-    h1 {
+    h1, h2 {
         margin: 0;
     }
 }
@@ -144,5 +145,31 @@ a {
 .blog-author-bio {
     clear: left;
     margin: 0;
+}
+
+.blog-article-table {
+    th[scope="row"] {
+        font-weight: normal;
+        width: 50%;
+    }
+}
+
+.blog-icon-list {
+    > li {
+        position: relative;
+        padding-left: 1.5em;
+
+        > .fa {
+            color: $medium-gray;
+            line-height: inherit;
+
+            &:first-child {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+    }
 }
 

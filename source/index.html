@@ -9,6 +9,10 @@ use:
     - posts_categories
 ---
 
+{% block page_title %}
+{{ site.title }}
+{% endblock %}
+
 {% block content_wrapper %}
     {% for post in page.pagination.items %}
         <article>
@@ -27,9 +31,7 @@ use:
                 {% endif %}
             </header>
 
-            <div>
-                {{ post.blocks.content|raw }}
-            </div>
+            {{ post.blocks.content|raw }}
 
             {% if post.meta.tags %}
                 <p class="tags">
@@ -48,13 +50,13 @@ use:
             <ul class="pager">
                 {% if page.pagination.previous_page %}
                     <li class="previous">
-                        <a href="{{ site.url }}{{ page.pagination.previous_page.url }}"><span aria-hidden="true">&larr;</span> Newer</a>
+                        <a href="{{ site.url }}{{ page.pagination.previous_page.url }}"><i class="fa fa-fw fa-chevron-left"></i> Newer</a>
                     </li>
                 {% endif %}
 
                 {% if page.pagination.next_page %}
                     <li class="next">
-                        <a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older <span aria-hidden="true">&rarr;</span></a>
+                        <a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older <i class="fa fa-fw fa-chevron-right"></i></a>
                     </li>
                 {% endif %}<br />
             </ul>
