@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{{ block('page_title')|striptags }} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
+        <title>{{ block('page_title')|striptags|trim ?: page.title }} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,6 +73,9 @@
                 <h1>
                     {% block page_title %}
                     {% endblock %}
+                    {% if block('page_title')|trim is empty %}
+                        {{ page.title }}
+                    {% endif %}
                 </h1>
             </div>
         </div>
