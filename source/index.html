@@ -47,21 +47,16 @@ use:
     {% endfor %}
 
     {% if page.pagination.previous_page or page.pagination.next_page %}
-        <nav>
-            <ul class="pager">
-                {% if page.pagination.previous_page %}
-                    <li class="previous">
-                        <a href="{{ site.url }}{{ page.pagination.previous_page.url }}"><i class="fa fa-fw fa-chevron-left"></i> Newer</a>
-                    </li>
-                {% endif %}
+        <nav class="clearfix">
+            {% if page.pagination.previous_page %}
+                <a class="btn btn-default pull-left" href="{{ site.url }}{{ page.pagination.previous_page.url }}"><i class="fa fa-fw fa-chevron-left"></i> Newer</a>
+            {% endif %}
 
-                {% if page.pagination.next_page %}
-                    <li class="next">
-                        <a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older <i class="fa fa-fw fa-chevron-right"></i></a>
-                    </li>
-                {% endif %}<br />
-            </ul>
+            {% if page.pagination.next_page %}
+                <a class="btn btn-default pull-right" href="{{ site.url }}{{ page.pagination.next_page.url }}">Older <i class="fa fa-fw fa-chevron-right"></i></a>
+            {% endif %}
         </nav>
+        <hr>
     {% endif %}
 {% endblock %}
 

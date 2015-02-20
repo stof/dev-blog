@@ -63,26 +63,21 @@
     {% endif %}
 
     {% if page.previous_post or page.next_post %}
-        <nav>
-            <ul class="pager">
-                {% if page.next_post %}
-                    <li class="previous">
-                        <a href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}">
-                            <i class="fa fa-fw fa-chevron-left"></i>
-                            Newer
-                        </a>
-                    </li>
-                {% endif %}
+        <nav class="clearfix">
+            {% if page.next_post %}
+                <a class="btn btn-default pull-left" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}">
+                    <i class="fa fa-fw fa-chevron-left"></i>
+                    Newer
+                </a>
+            {% endif %}
 
-                {% if page.previous_post %}
-                    <li class="next">
-                        <a href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}">
-                            Older
-                            <i class="fa fa-fw fa-chevron-right"></i>
-                        </a>
-                    </li>
-                {% endif %}
-            </ul>
+            {% if page.previous_post %}
+                <a class="btn btn-default pull-right" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}">
+                    Older
+                    <i class="fa fa-fw fa-chevron-right"></i>
+                </a>
+            {% endif %}
         </nav>
     {% endif %}
+
 {% endblock %}

@@ -105,6 +105,8 @@ h1, h2, h3, h4 {
 
 a {
   color: #498BCA; }
+  a:hover {
+    color: #2C6FAF; }
 
 #logo {
   width: 87px;
@@ -120,12 +122,15 @@ a {
   .blog-menu .navbar-nav > li > a {
     font-size: 14px;
     color: white;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-decoration: none; }
     .blog-menu .navbar-nav > li > a:hover {
-      text-decoration: underline; }
+      background: #2C6FAF; }
+  .blog-menu .navbar-brand:hover {
+    background: #2C6FAF; }
 
 .blog-header {
-  background: #666;
+  background: #333;
   margin-top: 0;
   padding: 0; }
   .blog-header h1, .blog-header p {
