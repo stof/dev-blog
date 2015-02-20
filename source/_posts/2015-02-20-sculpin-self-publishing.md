@@ -1,13 +1,12 @@
 ---
 title: Self Publishing Sculpin blog with Github and TravisCI
-categories:
-    - oss
-    - php
-tags:
-    - sculpin
-    - travisCI
 
-draft: true
+tags:
+    - php
+    - automation
+
+authors:
+    - rdohms
 ---
 
 *"We need a Tech blog, what should we use?"*

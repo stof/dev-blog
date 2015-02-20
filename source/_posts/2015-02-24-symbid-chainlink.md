@@ -1,14 +1,9 @@
 ---
 title: New Package: Symbid Chainlink
-categories:
+tags:
     - oss
     - php
-tags:
-    - composer
-    - packagist
-    - chain of responsibility
-    - open source
-    - package
+    - composer package
 authors:
     - rdohms
 draft: true
