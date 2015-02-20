@@ -1,18 +1,17 @@
 ---
 title: Self Publishing Sculpin blog with Github and TravisCI
-categories:
-    - oss
-    - php
-tags:
-    - sculpin
-    - travisCI
 
-draft: true
+tags:
+    - php
+    - automation
+
+authors:
+    - rdohms
 ---
 
 *"We need a Tech blog, what should we use?"*
 
-This was the topic of our monday morning post-standup discussion. It was time to start sharing some of our content and we needed a place for that. It was up to our team to decide how we would get it done.
+This was the topic of our Monday morning post-standup discussion. It was time to start sharing some of our content and we needed a place for that. It was up to our team to decide how we would get it done.
 
 The parameters and requirements came out pretty quick: *"Not Wordpress"*, *"Markdown please"*, *"No server maintenance"*, *"Developers only do git"*, *"It has to be pretty"*, ok not really, no one said it should be pretty. I quickly took these requirements and started giving it some thought. The obvious choice was Jekyll and OctoPress, but I had wanted to try out [Sculpin](http://sculpin.io) for a while, it was php, the core dev is a friend, this was a good chance.
 
@@ -25,7 +24,7 @@ The first piece was to setup github. That's pretty easy but just so you know how
 This is what the workflow looked like:
 
 1. Author writes a post.
-1. Author opens a pull rewuest.
+1. Author opens a pull request.
 1. Merge into `gh-pages` will trigger a TravisCI build.
 1. TravisCI build will generate static site.
 1. Travis commits the new code into `gh-pages` and pushes.
@@ -82,11 +81,11 @@ if [ "$TRAVIS_REPO_SLUG" == $REPO_SLUG ] && [ "$TRAVIS_PULL_REQUEST" == "false" 
   git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/${REPO_SLUG} gh-pages > /dev/null
   if [ $? -ne 0 ]; then echo "Could not clone the repository"; exit 1; fi
 
-  echo -e "Syncronizing content...\n"
+  echo -e "Synchronizing content...\n"
   rsync -rtv --delete ./output_prod/* ./gh-pages
   if [ $? -ne 0 ]; then echo "Could not sync directories"; exit 1; fi
 
-  echo -e "Commiting changes...\n"
+  echo -e "Committing changes...\n"
   cd gh-pages
   git add --all .
   git commit -m "Publishing latest changes to blog from build $TRAVIS_COMMIT (Build #$TRAVIS_BUILD_NUMBER) to gh-pages"
