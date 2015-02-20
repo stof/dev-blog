@@ -1,7 +1,10 @@
 $symbid-blue: #498BCA;
+$dark-symbid-blue: #2C6FAF;
+
 $light-gray: #f2f2f2;
 $medium-gray: #a0a0a0;
 $dark-gray: #666;
+$darker-gray: #333;
 
 @import "typography";
 
@@ -26,6 +29,10 @@ h1, h2, h3, h4 {
 
 a {
     color: $symbid-blue;
+
+    &:hover {
+        color: $dark-symbid-blue;
+    }
 }
 
 #logo {
@@ -47,16 +54,24 @@ a {
         font-size: 14px;
         color: white;
         text-transform: uppercase;
+        text-decoration: none;
 
         &:hover {
-            text-decoration: underline;
+            background: $dark-symbid-blue;
+            // text-decoration: underline;
+        }
+    }
+
+    .navbar-brand {
+        &:hover {
+            background: $dark-symbid-blue;
         }
     }
 }
 
 
 .blog-header {
-    background: $dark-gray;
+    background: $darker-gray;
     margin-top: 0;
     padding: 0;
 
