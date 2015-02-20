@@ -25,7 +25,7 @@ This is what the workflow looked like:
 
 1. Author writes a post.
 1. Author opens a pull request.
-1. Merge into `gh-pages` will trigger a TravisCI build.
+1. Merge into `master` will trigger a TravisCI build.
 1. TravisCI build will generate static site.
 1. Travis commits the new code into `gh-pages` and pushes.
 1. Github hosts the files.
