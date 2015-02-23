@@ -1,0 +1,21 @@
+<table class="table blog-article-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for job in jobs %}
+        <tr>
+            <th scope="row">
+                <a href="{{ site.url }}{{ job.url }}">{{ job.title }}</a>
+            </th>
+            <td>
+                {{ job.location }}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

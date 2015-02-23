@@ -1,0 +1,31 @@
+{% extends "default" %}
+
+{% block head_meta %}
+    <meta name="robots" content="index, follow">
+{% endblock %}
+
+{% block page_title %}
+    {{ page.title }}
+{% endblock %}
+
+{% block content_wrapper %}
+    <article class="blog-article">
+        <div class="blog-article-content">
+            {{ page.blocks.content|raw }}
+        </div>
+    </article>
+{% endblock %}
+
+{% block sidebar_post_meta %}
+    {% if page.location %}
+        <h4>Location</h4>
+        <p>{{ page.location }}</p>
+        <hr>
+    {% endif %}
+
+    {% if page.contact %}
+        <h4>Contact</h4>
+        <p><a href="mailto:{{ page.contact }}">{{ page.contact }}</a></p>
+        <hr>
+    {% endif %}
+{% endblock %}
