@@ -1,0 +1,14 @@
+---
+layout: default
+use: [jobs]
+
+---
+
+{% block page_title %}
+    Jobs
+{% endblock %}
+
+
+{% block content %}
+    {% include "jobs_list.html.twig" with {jobs: data.jobs} %}
+{% endblock %}

@@ -5,3 +5,9 @@ sculpin_content_types:
             - tags
             - categories
             - authors
+    jobs:
+        permalink: jobs/:slug_title/
+        path: _jobs
+        singular_name: job
+        layout: job
+        enabled: true
