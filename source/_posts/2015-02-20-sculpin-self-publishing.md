@@ -13,9 +13,9 @@ authors:
 
 This was the topic of our Monday morning post-standup discussion. It was time to start sharing some of our content and we needed a place for that. It was up to our team to decide how we would get it done.
 
-The parameters and requirements came out pretty quick: *"Not Wordpress"*, *"Markdown please"*, *"No server maintenance"*, *"Developers only do git"*, *"It has to be pretty"*, ok not really, no one said it should be pretty. I quickly took these requirements and started giving it some thought. The obvious choice was Jekyll and OctoPress, but I had wanted to try out [Sculpin](http://sculpin.io) for a while, it was php, the core dev is a friend, this was a good chance.
+The parameters and requirements came out pretty quick: *"Not Wordpress"*, *"Markdown please"*, *"No server maintenance"*, *"Developers only do git"*, *"It has to be pretty"*. Ok not really, no one said it should be pretty. I quickly took these requirements and started giving it some thought. The obvious choice was Jekyll and OctoPress, but I had wanted to try out [Sculpin](http://sculpin.io) for a while: it was php, the core dev is a friend, this was a good chance.
 
-So we went for it, decided on Sculpin and decided to host it on Github Pages so we would have no work in keeping it up or scaling it. That was the challenge, since Jekyll is Github powered we would get that out of the box, but no PHP love from them, so we would have to find a way. I toyed with the idea of hosting something on Heroku to do it, or somewhere else, but that would be yet another moving part. [@Wouterjnl](https://twitter.com/wouterjnl) mentioned on twitter that he had done this using [TravisCI](http://travis-ci.org) builds and he would share the idea at some point.
+So we went for it, decided on Sculpin and hosting it on Github Pages so we would have no work in keeping it up or scaling it. That was the challenge, since Jekyll is Github powered we would get that out of the box, but no PHP love from them, so we would have to find a way. I toyed with the idea of hosting something on Heroku to do it, or somewhere else, but that would be yet another moving part. [@Wouterjnl](https://twitter.com/wouterjnl) mentioned on twitter that he had done this using [TravisCI](http://travis-ci.org) builds and he would share the idea at some point.
 
 I suffer from *"I can't wait"* disorder so I started hacking on some ideas on some free time. Reading some similar ideas of combining TravisCI and other static site generators I slowly pieced together the recipe below. 
 
@@ -25,7 +25,7 @@ This is what the workflow looked like:
 
 1. Author writes a post.
 1. Author opens a pull request.
-1. Merge into `master` will trigger a TravisCI build.
+1. Merge into `gh-pages` will trigger a TravisCI build.
 1. TravisCI build will generate static site.
 1. Travis commits the new code into `gh-pages` and pushes.
 1. Github hosts the files.
