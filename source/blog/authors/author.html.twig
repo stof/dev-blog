@@ -1,25 +1,16 @@
 ---
 layout: default
 nav: authors
-generator: posts_author_index
-use:
-    - posts_categories
-    - posts_tags
+generator: [all_authors]
 ---
-
 {% block page_title %}
-    Posts by {{ author.name }}
+    Posts by {{ page.author.name }}
 {% endblock %}
-
-{% set handle = page.author %}
-{% set author = site.authors[handle] %}
 
 {% block content %}
     {% include "article_list.html.twig" with {posts: page.author_posts} %}
 {% endblock content %}
 
 {% block sidebar_post_meta %}
-    {% if site.authors[handle] %}
-        {% include "author_box.html.twig" with {handle: handle} %}
-    {% endif %}
+    {% include "author_box.html.twig" with {author: page.author, handle: page.author_handle} %}
 {% endblock %}

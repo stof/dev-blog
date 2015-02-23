@@ -1,0 +1,15 @@
+services:
+    symbid_authors.twig.authors:
+        class: Symbid\DevBlog\AuthorsBundle\Twig\AuthorExtension
+        arguments:
+            - %authors%
+        tags:
+            - { name: twig.extension }
+
+    symbid_authors.generator.authors:
+        class: Symbid\DevBlog\AuthorsBundle\Generator\AuthorsGenerator
+        arguments:
+            - @sculpin.data_provider_manager
+            - %authors%
+        tags:
+            - { name: sculpin.generator, alias: all_authors }

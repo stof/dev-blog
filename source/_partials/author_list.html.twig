@@ -2,7 +2,7 @@
     <div class="blog-article-authors">
         By
         {% for handle in authors %}
-            {% set author = site.authors[handle] %}
+            {% set author = get_author_data(handle) %}
             <span><a href="/blog/authors/{{ handle }}">{{ author.name }}</a></span>
             {% if not loop.last %}, {% endif %}
         {% endfor %}

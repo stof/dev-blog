@@ -9,3 +9,4 @@ output_*/
 source/components/
 gh-pages/
 node_modules/
+vendor/

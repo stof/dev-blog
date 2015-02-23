@@ -1,4 +1,6 @@
-{% set author = site.authors[handle] %}
+{% if author is not defined %}
+    {% set author = get_author_data(handle) %}
+{% endif %}
 
 <div class="blog-author">
     <img class="img-circle blog-author-avatar" src="{{ author.avatar }}" width="40" alt="">
