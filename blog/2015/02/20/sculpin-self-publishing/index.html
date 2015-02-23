@@ -96,9 +96,9 @@
 
 <p>This was the topic of our Monday morning post-standup discussion. It was time to start sharing some of our content and we needed a place for that. It was up to our team to decide how we would get it done.</p>
 
-<p>The parameters and requirements came out pretty quick: <em>"Not Wordpress"</em>, <em>"Markdown please"</em>, <em>"No server maintenance"</em>, <em>"Developers only do git"</em>, <em>"It has to be pretty"</em>, ok not really, no one said it should be pretty. I quickly took these requirements and started giving it some thought. The obvious choice was Jekyll and OctoPress, but I had wanted to try out <a href="http://sculpin.io">Sculpin</a> for a while, it was php, the core dev is a friend, this was a good chance.</p>
+<p>The parameters and requirements came out pretty quick: <em>"Not Wordpress"</em>, <em>"Markdown please"</em>, <em>"No server maintenance"</em>, <em>"Developers only do git"</em>, <em>"It has to be pretty"</em>. Ok not really, no one said it should be pretty. I quickly took these requirements and started giving it some thought. The obvious choice was Jekyll and OctoPress, but I had wanted to try out <a href="http://sculpin.io">Sculpin</a> for a while: it was php, the core dev is a friend, this was a good chance.</p>
 
-<p>So we went for it, decided on Sculpin and decided to host it on Github Pages so we would have no work in keeping it up or scaling it. That was the challenge, since Jekyll is Github powered we would get that out of the box, but no PHP love from them, so we would have to find a way. I toyed with the idea of hosting something on Heroku to do it, or somewhere else, but that would be yet another moving part. <a href="https://twitter.com/wouterjnl">@Wouterjnl</a> mentioned on twitter that he had done this using <a href="http://travis-ci.org">TravisCI</a> builds and he would share the idea at some point.</p>
+<p>So we went for it, decided on Sculpin and hosting it on Github Pages so we would have no work in keeping it up or scaling it. That was the challenge, since Jekyll is Github powered we would get that out of the box, but no PHP love from them, so we would have to find a way. I toyed with the idea of hosting something on Heroku to do it, or somewhere else, but that would be yet another moving part. <a href="https://twitter.com/wouterjnl">@Wouterjnl</a> mentioned on twitter that he had done this using <a href="http://travis-ci.org">TravisCI</a> builds and he would share the idea at some point.</p>
 
 <p>I suffer from <em>"I can't wait"</em> disorder so I started hacking on some ideas on some free time. Reading some similar ideas of combining TravisCI and other static site generators I slowly pieced together the recipe below.</p>
 
@@ -109,7 +109,7 @@
 <ol>
 <li>Author writes a post.</li>
 <li>Author opens a pull request.</li>
-<li>Merge into <code>master</code> will trigger a TravisCI build.</li>
+<li>Merge into <code>gh-pages</code> will trigger a TravisCI build.</li>
 <li>TravisCI build will generate static site.</li>
 <li>Travis commits the new code into <code>gh-pages</code> and pushes.</li>
 <li>Github hosts the files.</li>
