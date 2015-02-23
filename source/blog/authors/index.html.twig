@@ -1,6 +1,7 @@
 
 ---
 layout: default
+nav: authors
 use:
     - posts_authors
 ---
@@ -11,7 +12,7 @@ use:
 
 
 {% block content %}
-    {% for author,posts in data.posts_authors %}
-        {% include "author_box.html.twig" with {handle: author} %}
+    {% for handle, author in get_authors_data() %}
+        {% include "author_box.html.twig" with {author: author, handle: handle} %}
     {% endfor %}
 {% endblock %}

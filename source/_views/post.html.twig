@@ -7,8 +7,8 @@
 {% block head_authors %}
     {% if (page.authors) %}
         {% for handle in page.authors %}
-        <meta name="author" content="{{ site.authors[handle].twitter }}">
-        <link rel="author" href="{{ site.authors[handle].twitter }}">
+        <meta name="author" content="{{ get_author_data(handle).twitter }}">
+        <link rel="author" href="{{ get_author_data(handle).twitter }}">
         {% endfor %}
     {% endif %}
 {% endblock %}
