@@ -16,12 +16,16 @@ IJburglaan 634E<br>
 1087 CE<br>
 Amsterdam<br>
 
-## About Symbid in general
+## About Symbid
 
-[Symbid](http://symbid.com) is a listed online funding platform that helps private investors, SME-entrepreneurs and startups come together in a safe and secure online ecosystem.
+In 2011 [Symbid](http://symbid.com) began as one of the first investment crowdfunding platforms in the world with one mission: To help entrepreneurs find funding and start their business, by asking funding from the “crowd”. At Symbid, everyone can become an investor, from as little as 20 euro or much more. We answer a strong need in today’s business world: information technology, which democratizes, personalizes and connects the world of finance. 
 
-Entrepreneurs can pitch their business ideas to investors, and investors get the chance to invest in profitable and game-changing ideas. In doing so, Symbid brings together all relevant parties that are necessary for successful funding.
+We have since developed into The Funding Network bringing online finance solutions to entrepreneurs, institutional investors and the crowd. In essence, we strive for symbiosis between all who wish to connect, fund and grow in the world of SME finance, however big or small.
 
-Symbid is globally seen as a leader in online equity financing.
+That is our mission. 
+*“To enable the flow of funding worldwide.”*
 
-You can read more about the corporate structure and activities at [SymbidCorp.com](http://symbidcorp.com).
+The Funding Network by Symbid will be the fastest and most efficient capital market for private entreprises
+
+
+*You can read more about the corporate structure and activities at [SymbidCorp.com](http://symbidcorp.com).*
