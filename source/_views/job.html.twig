@@ -19,13 +19,21 @@
 {% block sidebar_post_meta %}
     {% if page.location %}
         <h4>Location</h4>
-        <p>{{ page.location }}</p>
+        <p>{{ page.location }}
+        {% if page.location == "Amsterdam" %}
+            <img src="/images/y10entrance.jpg" class="thumbnail img-responsive"></img>
+        {% endif %}
+        </p>
         <hr>
     {% endif %}
 
     {% if page.contact %}
         <h4>Contact</h4>
-        <p><a href="mailto:{{ page.contact }}">{{ page.contact }}</a></p>
+        <ul class="list-unstyled">
+            <li>{{ page.contact.name }}</li>
+            <li>{{ page.contact.phone }}</li>
+            <li><a href="mailto:{{ page.contact.email }}">{{ page.contact.email }}</a></li>
+        </ul>
         <hr>
     {% endif %}
 {% endblock %}

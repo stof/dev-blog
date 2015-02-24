@@ -1,26 +1,18 @@
 ---
-title: Software developer
+title: Software developer (PHP)
 location: Amsterdam
-contact: rick@symbid.com
+contact:
+    name: "Rick Buitenman"
+    email: rick@symbid.com
+    phone: "+31 (0)6 24856546"
 ---
-
-## About us
-
-Symbid is a listed online funding platform that helps private investors, SME-entrepreneurs and startups come together in a safe and secure online ecosystem. Entrepreneurs can pitch their business ideas to investors, and investors get the chance to invest in profitable and game-changing ideas. In doing so, Symbid brings together all relevant parties that are necessary for successful funding. Symbid is globally seen as a leader in online equity financing.
-
-## About our engineering team
-
-Our team currently consists of four experienced front-end, back-end and devops developers. We maintain a culture of high quality code, regular releases and maximum automation of our toolchain. We balance frequent and open communication with quiet working conditions in our open but engineers-only workspace.
-
-## The role
-
 We’re looking for a web developer with a preference for back-end development. Your time will be split between the maintenance of our existing (recent, no ancient legacy!) applications and the development of our new suite of next generation applications.
 
 Areas of responsibility will depend on the skill and experience you add to the team, and there will be plenty of room to learn and explore new things.
 
 We work mostly in PHP (Symfony2) but also believe in using the right tool for each particular job. Our stack also includes AWS, MySQL, ElasticSearch, Redis, and we use bits and pieces of things like Javascript (NodeJS) and Python for our tooling.
 
-## What we’re looking for
+## What we need from you
 
 - Experience developing complex applications with high-end MVC frameworks like Symfony.
 - Familiar with good development practices (continuous integration, unit testing, etcetera) and Agile processes.
