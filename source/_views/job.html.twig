@@ -21,7 +21,7 @@
         <h4>Location</h4>
         <p>{{ page.location }}
         {% if page.location == "Amsterdam" %}
-            <img src="/images/y10entrance.jpg" width="100%"></img>
+            <img src="/images/y10entrance.jpg" class="thumbnail img-responsive"></img>
         {% endif %}
         </p>
         <hr>
@@ -29,11 +29,11 @@
 
     {% if page.contact %}
         <h4>Contact</h4>
-        <p>
-        {{ page.contact.name }}<br>
-        {{ page.contact.phone }}<br>
-        <a href="mailto:{{ page.contact.email }}">{{ page.contact.email }}</a>
-        </p>
+        <ul class="list-unstyled">
+            <li>{{ page.contact.name }}</li>
+            <li>{{ page.contact.phone }}</li>
+            <li><a href="mailto:{{ page.contact.email }}">{{ page.contact.email }}</a></li>
+        </ul>
         <hr>
     {% endif %}
 {% endblock %}
