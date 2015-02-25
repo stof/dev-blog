@@ -10,3 +10,4 @@ source/components/
 gh-pages/
 node_modules/
 vendor/
+source/css/*.css
