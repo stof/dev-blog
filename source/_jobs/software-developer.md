@@ -19,7 +19,7 @@ We work mostly in PHP (Symfony2) but also believe in using the right tool for ea
 
 Naturally we would prefer you already have experience with our core stack, but you will also grab our attention if you can bring any of the following to the table:
 
-- DevOps skils and experience with automated (cloud) deployment and provisioning.
+- DevOps skills and experience with automated (cloud) deployment and provisioning.
 - XBRL knowledge and/or experience with financial data in general.
 - Microservices, distributed computing.
 - Single Sign-On, OAuth, identity and authentication management in general.
