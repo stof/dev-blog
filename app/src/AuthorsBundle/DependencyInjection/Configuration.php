@@ -29,6 +29,7 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('twitter')->end()
                         ->scalarNode('twitter_handle')->end()
                         ->scalarNode('github')->end()
+                        ->scalarNode('linkedin')->end()
                     ->end()
                 ->end()
             ->end()
